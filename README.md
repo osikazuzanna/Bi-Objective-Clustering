@@ -10,35 +10,34 @@ Each policy is represented as a dot, and its discounted returns are on the X and
 *With policy summarization, the trade-off of the policies can also be represented by the way each policy behaves using policy summarization techniques. In our paper, we used
 [Highlights, AAMAS 2018](https://scholar.harvard.edu/files/oamir/files/highlightsmain.pdf) to highlight the most important trajectories for each policy.*
 
+
+
 <img src="P1_Highlights.gif" alt="P1" width="900"/> 
 
 <img src="P5_Highlights.gif" alt="P5" width="900"/> 
 
 
+*To show that similar trade-offs in the objective space doesn't necessary mean similar behaviour, we show highlights for 2 policies, Policy 1 (P1) and Policy 5 (P5), which are similar to each other based on the scatter plot in the objective space. However, when you study the behaviour based on the highlights, you can notice that the style of taking over other cars differs between two policies - see Highlight 1 for P1 and Highlight 2 for P5. These differences are crucial in decision-making scenarios, where a decision maker has to choose one policy from a set of solutions.*
 
-
+**Our paper shows how this can be used in a decision-making scenario to support a DM in making a decision in a complex, multi-dimensional set of solutions**
 
 ### Installation  
   
-The project is based on Python 3.7. All the necessary packages are in requirements.txt.
+The project is based on Python 3.9. All the necessary packages are in requirements.txt.
 Create a virtual environment and install the requirements using:
 ```
 pip install -r requirements.txt
 ```
 
 ### Required repositories
-The Highway domain implementation of the algorithm requires the following repositories:
+The implementation of MORL agents requires the following repository:
 
-[https://github.com/eleurent/highway-env](https://github.com/eleurent/highway-env) V1.4
+[https://github.com/LucasAlegre/morl-baselines](https://github.com/LucasAlegre/morl-baselines)
 
-[https://github.com/eleurent/rl-agents](https://github.com/eleurent/rl-agents)
-
-### Adding a new domain
-The code works by accessing an **interface** for each domain.
-Adding a new domain requires a relevant interface and configuration file to be added to *disagreements/Interfaces* and *disagreements/configs* respectively.
 
 ### Running
-The *configuration_dict* dictionary in *run_comparison.py* should be updated for any new agents or domains you wish to compare. 
-```
-python run_comparison.py -a1 ClearLane -a2 FastRight
-```
+
+The repository is dived into two parts:
+* *creating_distances* for creating the highlights and calculating distances between the policies in two spaces, which includes:
+  * *agents* folder with trained GPI-PD agents per each environment described in the papers
+  * *highlights* folder with
