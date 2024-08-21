@@ -29,15 +29,15 @@ Create a virtual environment and install the requirements using:
 pip install -r requirements.txt
 ```
 
+## Requierements
+
 ### Required repositories
 The implementation of MORL agents requires the following repository:
 
 [https://github.com/LucasAlegre/morl-baselines](https://github.com/LucasAlegre/morl-baselines)
 
+### Required Inputs
+The code is divided into two parts:
+  * *generating_input*, which generates distance matrices in both spaces (behavior and objective), given: a trained agent, the environment, the pareto-weights and the objective values
+  * *src*, with source code for PAN, which is used to compute the clusters using bi-objective clustering approach
 
-### Running
-
-The repository is dived into two parts:
-* *creating_distances* for creating the highlights and calculating distances between the policies in two spaces, which includes:
-  * *agents* folder with trained GPI-PD agents per each environment described in the papers
-  * *highlights* folder with
