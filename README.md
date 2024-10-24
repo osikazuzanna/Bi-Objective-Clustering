@@ -1,5 +1,5 @@
 # Navigating Trade-offs: Policy Summarization for Multi-Objective Reinforcement Learning
-Official code repository for ["Navigating Trade-offs: Policy Summarization for Multi-Objective Reinforcement Learning (ECAI-2024)]().  
+Official code repository for ["Navigating Trade-offs: Policy Summarization for Multi-Objective Reinforcement Learning (ECAI-2024)](https://ebooks.iospress.nl/doi/10.3233/FAIA240830).  
 
 
 *Multi-Objective Reinforcement Learning outputs a set of policies, where each offers different trade-offs concerning discounted rewards, as can be seen on the plot below for the Highway environment. 
