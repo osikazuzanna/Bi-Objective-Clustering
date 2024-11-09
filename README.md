@@ -29,7 +29,7 @@ Create a virtual environment and install the requirements using:
 pip install -r requirements.txt
 ```
 
-## Requierements
+## Requirements
 
 ### Required repositories
 The implementation of MORL agents requires the following repository:
